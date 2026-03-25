@@ -5,6 +5,7 @@
 This project implements **univariate linear regression** from scratch to predict house prices based on house size. Built as part of my journey through Andrew Ng's Machine Learning Specialization (Week 1), this implementation uses only **NumPy** for numerical operations and **Matplotlib** for visualization — no machine learning libraries like scikit-learn are used.
 
 The goal was to deeply understand:
+
 - How linear regression works under the hood
 - The mathematics of gradient descent
 - How to implement ML algorithms without relying on pre-built libraries
@@ -22,6 +23,7 @@ The goal was to deeply understand:
 ## Why Univariate?
 
 Starting with a single variable simplifies the learning process by:
+
 - Making it easy to visualize the relationship between feature and target
 - Allowing clear verification that gradient descent is working
 - Building a strong foundation before moving to multivariate regression
@@ -29,41 +31,51 @@ Starting with a single variable simplifies the learning process by:
 ## Model Details
 
 ### Hypothesis Function
+
 ```
 h(x) = θ₀ + θ₁ · x
 ```
+
 Where:
+
 - `x` = house size (sq ft)
 - `θ₀` = intercept (bias)
 - `θ₁` = slope (weight for size)
 - `h(x)` = predicted price
 
 ### Cost Function (Mean Squared Error)
+
 ```
 J(θ₀, θ₁) = (1/2m) * Σ (h(x⁽ⁱ⁾) - y⁽ⁱ⁾)²
 ```
+
 Measures how far predictions are from actual values.
 
 ### Gradient Descent Update Rules
+
 ```
 θ₀ := θ₀ - α · (1/m) · Σ (h(x⁽ⁱ⁾) - y⁽ⁱ⁾)
 θ₁ := θ₁ - α · (1/m) · Σ (h(x⁽ⁱ⁾) - y⁽ⁱ⁾) · x⁽ⁱ⁾
 ```
+
 Where `α` (alpha) is the learning rate — the size of the step taken downhill.
 
 ## Results
 
 ### Final Parameters
+
 After running gradient descent for 1000 iterations with `α = 0.1`:
 
 - **θ₀ (intercept)**: ≈ 4.2 (true value: 4)
 - **θ₁ (slope)**: ≈ 2.95 (true value: 3)
 
 ### Cost Reduction
+
 - **Initial cost**: ~12.5
 - **Final cost**: ~0.9 (irreducible error from noise)
 
 ### Key Observations
+
 - Cost decreased rapidly in the first 200 iterations, then gradually flattened
 - Final parameters closely match the true relationship despite added noise
 - The model successfully captured the underlying linear pattern
@@ -74,13 +86,13 @@ After running gradient descent for 1000 iterations with `α = 0.1`:
 
 ![Cost History](images/cost_history.png)
 
-*This plot shows gradient descent converging smoothly. The steep initial drop indicates fast learning, while the gradual flattening shows the algorithm approaching the minimum without oscillations.*
+_This plot shows gradient descent converging smoothly. The steep initial drop indicates fast learning, while the gradual flattening shows the algorithm approaching the minimum without oscillations._
 
 ### 2. Model Fit: Regression Line vs. Training Data
 
 ![Model Fit](images/model_fit.png)
 
-*Blue dots represent actual training data (house size vs. price). The red line shows model predictions using learned parameters. The line runs through the "middle" of the data points, confirming good fit.*
+_Blue dots represent actual training data (house size vs. price). The red line shows model predictions using learned parameters. The line runs through the "middle" of the data points, confirming good fit._
 
 ## Technologies Used
 
@@ -92,21 +104,26 @@ After running gradient descent for 1000 iterations with `α = 0.1`:
 ## How to Run
 
 ### Prerequisites
+
 Install required libraries:
+
 ```bash
 pip install numpy matplotlib
 ```
 
 ### Steps
+
 1. Clone this repository:
+
 ```bash
-git clone https://github.com/yourusername/linear-regression-from-scratch.git
-cd linear-regression-from-scratch
+git clone https://github.com/FeralSatyam/House_Price_Prediction_Using_Univariate_Linear_Regression_and_Gradient_Descent.git
+cd House_Price_Prediction_Using_Univariate_Linear_Regression_and_Gradient_Descent
 ```
 
 2. Open the Jupyter notebook:
+
 ```bash
-jupyter notebook house_price_predictor.ipynb
+jupyter notebook house_price_gradient_descent.ipynb
 ```
 
 3. Run all cells to:
@@ -146,5 +163,8 @@ This project is the foundation for more advanced work:
 
 ---
 
-*Built with curiosity and a commitment to understanding the fundamentals.*
+_Built with curiosity and a commitment to understanding the fundamentals._
+
+```
+
 ```

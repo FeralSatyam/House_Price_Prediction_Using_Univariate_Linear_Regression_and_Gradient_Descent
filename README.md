@@ -166,5 +166,3 @@ This project is the foundation for more advanced work:
 _Built with curiosity and a commitment to understanding the fundamentals._
 
 ```
-
-```

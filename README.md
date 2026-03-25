@@ -1,4 +1,4 @@
-# House_Price_Prediction_Using_Univariate_Linear_Regression_and_Gradient_Descent
+# House Price Prediction Using Univariate Linear Regression and Gradient Descent
 
 ## Overview
 
